@@ -1,0 +1,48 @@
+version: '3.9'
+
+services:
+  # MongoDB Service
+  mongo_db:
+    container_name: db_container
+    image: mongo
+    restart: always
+    volumes:
+      - mongo_db:/data/db
+
+
+  # Node.js API Service
+  api:
+    container_name: papergenie-api
+    restart: unless-stopped
+    image: papergenie-api-prod:1.0.0
+    environment:
+      MONGODB_URI: mongodb://db_container:27017
+      MONGODB_NAME: papergenie
+    build:
+      context: api
+      target: production
+      dockerfile: Dockerfile
+    ports:
+      - 4000:4000
+    depends_on:
+      - mongo_db
+
+  # React Client Service
+  client:
+    container_name: papergenie-client
+    restart: unless-stopped
+    image: papergenie-client-prod:1.0.0
+    build:
+      context: client
+      target: production
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - api
+
+
+volumes:
+  mongo_db: {}
+    
+

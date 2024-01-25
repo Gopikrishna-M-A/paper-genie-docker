@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+
+.first-page{
+
+    background-color: #fff;
+    font-size: 14px;
+}
+#a4{
+  font-family: 'PT Serif', serif ;
+}
+.antd-font{
+  font-family: 'PT Serif', serif !important;
+}
+
+.parent *{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 5px;
+}
+.question-paper{
+    width: 100%;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.question-paper::-webkit-scrollbar {
+    display: none;
+  }
+
+
+
+.parent {  display: grid;
+    grid-template-columns: 0.6fr 1.4fr;
+    grid-template-rows: 1fr 1fr 1.5fr 1.1fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo university"
+      "logo department"
+      "logo exam"
+      "logo details"
+      "student-name blank"
+      "student-id blank2"
+      "specialization blank3"
+      "invi-sign blank4"
+      "level Advanced-diploma"
+      "course-name probablity-stas"
+      "course-code stat3101"
+      "section blank5";
+      border: 1px solid black;
+      border-right: 0;
+  }
+  
+  .logo { grid-area: logo; }
+  
+  .university { grid-area: university; }
+  
+  .department { grid-area: department; }
+  
+  .exam { grid-area: exam; }
+  
+  .details { grid-area: details; }
+  
+  .student-name { grid-area: student-name; }
+  
+  .student-id { grid-area: student-id; }
+  
+  .specialization { grid-area: specialization; }
+  
+  .invi-sign { grid-area: invi-sign; }
+  
+  .level { grid-area: level; }
+  
+  .course-name { grid-area: course-name; }
+  
+  .course-code { grid-area: course-code; }
+  
+  .section { grid-area: section; }
+  
+  .Advanced-diploma { grid-area: Advanced-diploma; }
+  
+  .probablity-stas { grid-area: probablity-stas; }
+  
+  .stat3101 { grid-area: stat3101; }
+  
+  .blank { grid-area: blank; }
+  
+  .blank2 { grid-area: blank2; }
+  
+  .blank3 { grid-area: blank3; }
+  
+  .blank4 { grid-area: blank4; }
+  
+  .blank5 { grid-area: blank5; }
+  
+  
+
+.details{
+    font-size: 12px;
+    width: 100%;
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.logo-img{
+    width: 50%;
+    border: none;
+    margin: auto;
+    padding: 0;
+}
+.logo{
+    padding: 0;
+    margin: 0;
+    border-top: none;
+}
+
+.university{
+    justify-content: center;
+    border-top: none;
+}
+.department{
+    justify-content: center;
+}
+.detail{
+    height: 100%;
+    border: none;
+    border-left: 1px solid black;
+    padding: 5px 10px ;
+}
+.detail:first-child{
+    border: none;
+}
+.h-tag{
+    border: none;
+}
+.exam{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.instructions{
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 10px 20px ;
+
+}
+
+
+
+
+.student-sec{
+    margin-top: 20px;
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+    padding: 10px;
+}
+.student-sec .sec{
+    height: 100px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.marks *{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.marks > * {
+    padding: 5px; 
+}
+
+.marks {  display: grid;
+    grid-template-columns: 1.6fr 0.7fr 0.7fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "section- max-marks obtained-marks"
+      "A ten blank1"
+      "B twenty blank2"
+      "sub-total-marks black3 blank4"
+      "grand-total-marks thirty blank5";
+      margin-top: 20px;
+      border-bottom: 1px solid black;
+      border-left: 1px solid black;
+  }
+  
+  .section- { grid-area: section-; }
+  
+  .max-marks { grid-area: max-marks; }
+  
+  .obtained-marks { grid-area: obtained-marks; }
+  
+  .A { grid-area: A; }
+  
+  .B { grid-area: B; }
+  
+  .ten { grid-area: ten; }
+  
+  .twenty { grid-area: twenty; }
+  
+  .blank1 { grid-area: blank1; }
+  
+  .blank2 { grid-area: blank2; }
+  
+  .sub-total-marks { grid-area: sub-total-marks; }
+  
+  .grand-total-marks { grid-area: grand-total-marks; }
+  
+  .black3 { grid-area: black3; }
+  
+  .blank4 { grid-area: blank4; }
+  
+  .thirty { grid-area: thirty; }
+  
+  .blank5 { grid-area: blank5; }
+  
+
+
+
+
+  .qusetion-head{
+        display: flex;
+        justify-content: space-between;
+  }
+  .line {
+    margin: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .ant-divider-horizontal {
+    border-color: black !important;
+  }
+  .question{
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .question-img{
+    width: 30%;
+    margin-top: 10px;
+  }
+  /* .question-table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:fit-content;
+    background-color: transparent;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  } */
+
+  .question-table {
+    margin: 10px 0;
+    border-collapse: collapse;
+    width: 70%;
+    border: 1px solid black; /* Border style */
+    font-size: 14px;
+  }
+  
+  .question-table th,
+  .question-table td {
+    border: 1px solid black; /* Border style */
+    padding: 8px; /* Cell padding */
+    text-align: left;
+  }
+  
+  .question-table th {
+    background-color: #f2f2f2; /* Header background color */
+  }
+  
+  .question-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Even row background color */
+  }
+  
+  
+
+
+
+
+  /* .question-table .ant-table-cell{
+    border-color: black !important;
+    border-right: 1px solid black;
+  }
+  .ant-table-cell:last-child{
+    border-right: none;
+  }
+  :where(.css-dev-only-do-not-override-byeoj0).ant-table-wrapper .ant-table-thead>tr>th, :where(.css-dev-only-do-not-override-byeoj0).ant-table-wrapper .ant-table-tbody>tr>th, :where(.css-dev-only-do-not-override-byeoj0).ant-table-wrapper .ant-table-tbody>tr>td, :where(.css-dev-only-do-not-override-byeoj0).ant-table-wrapper tfoot>tr>th, :where(.css-dev-only-do-not-override-byeoj0).ant-table-wrapper tfoot>tr>td {
+    padding: 5px 10px !important;
+  } */
+
+  .options{
+    margin:20px 0 ;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 13px;
+  }
+  .options *{
+    width: 40%;
+
+  }
+
+
+
+
+
+
+
+.margin-input-section{
+  position: fixed;
+  top: 100px;
+  left: 10px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  gap: 5px;
+  margin: 10px;
+  border-radius: 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.odd-page {
+  background-color: #f5f5f5; /* Light gray background for odd pages */
+}
+
+.even-page {
+  background-color: #ffffff; /* White background for even pages */
+}
+
+.Question-paper-section{
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+/* .page-color:first-child{
+  visibility: hidden;
+} */
+
+.page-color{
+  width: 100%;
+  height: 1000px;
+  /* border: 1px solid grey; */
+}
+.background-box{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+
+@media (width < 576px){
+  .first-page{
+      font-size: 10px;
+  }
+  .marks > * {
+      padding: 0;
+  }
+  .student-sec .sec{
+      height: 75px;
+  }
+  .margin-input-section{
+    display: none;
+  }
+}
