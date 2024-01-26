@@ -14,14 +14,10 @@ services:
   api:
     container_name: papergenie-api
     restart: unless-stopped
-    image: papergenie-api-prod:1.0.0
+    image: gopikrishna6003/paper-genie-api:latest
     environment:
       MONGODB_URI: mongodb://db_container:27017
       MONGODB_NAME: papergenie
-    build:
-      context: api
-      target: production
-      dockerfile: Dockerfile
     ports:
       - 4000:4000
     depends_on:
@@ -31,11 +27,7 @@ services:
   client:
     container_name: papergenie-client
     restart: unless-stopped
-    image: papergenie-client-prod:1.0.0
-    build:
-      context: client
-      target: production
-      dockerfile: Dockerfile
+    image: gopikrishna6003/paper-genie-client:latest
     ports:
       - 3000:3000
     depends_on:
